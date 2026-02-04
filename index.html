@@ -17,13 +17,21 @@
 
     <header class="site-header">
       <div class="logo">Henry Raji</div>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#chess">Chess</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#drums">Drums</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#chess">Chess</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#drums">Drums</a>
+          <a href="#coding">Coding</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button type="button" data-theme-value="light">Light</button>
+          <button type="button" data-theme-value="dark">Dark</button>
+          <button type="button" data-theme-value="auto">Auto</button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -86,33 +94,45 @@
           <h2>Chess Snapshot</h2>
           <p>Public profile metrics and quick facts.</p>
         </div>
-        <div class="stats">
-          <div class="stat-card">
-            <h3>Federation</h3>
-            <p>Lebanon</p>
+        <div class="chess-layout">
+          <div class="stats">
+            <div class="stat-card">
+              <h3>Federation</h3>
+              <p>Lebanon</p>
+            </div>
+            <div class="stat-card">
+              <h3>Rapid Rating</h3>
+              <p>1498</p>
+            </div>
+            <div class="stat-card">
+              <h3>World Ranking (Rapid)</h3>
+              <p>#1498</p>
+            </div>
           </div>
-          <div class="stat-card">
-            <h3>Rapid Rating</h3>
-            <p>1498</p>
+          <div class="chess-media">
+            <div class="chess-photo">
+              <img src="chess1.jpg" alt="Henry focused during a chess game" />
+            </div>
+            <p class="chess-caption">A quiet moment over the board during match play.</p>
           </div>
-          <div class="stat-card">
-            <h3>World Ranking (Rapid)</h3>
-            <p>#1498</p>
-          </div>
-        </div>
-        <div class="chess-media">
-          <div class="chess-photo">
-            <img src="chess1.jpg" alt="Henry focused during a chess game" />
-          </div>
-          <p class="chess-caption">A quiet moment over the board during match play.</p>
-        </div>
-        <div class="panel-note">
-          <p>
-            Last verified: Jan 31, 2026. Ratings update over time.
-          </p>
-          <div class="links">
-            <a href="https://www.chess.com/players/henry-raji">Chess.com profile</a>
-            <a href="https://chesstv.com/profile/5331803">ChessTV profile</a>
+          <div class="chess-meta">
+            <div class="panel-note">
+              <p>
+                Last verified: Jan 31, 2026. Ratings update over time.
+              </p>
+              <div class="links">
+                <a href="https://www.chess.com/players/henry-raji">Chess.com profile</a>
+                <a href="https://chesstv.com/profile/5331803">ChessTV profile</a>
+              </div>
+            </div>
+            <div class="chess-details">
+              <p>
+                Henry has been playing chess for 4 years, developing strong strategic
+                thinking, patience, and problem-solving skills. Additionally, he is
+                actively playing in rated tournaments, working hard to increase his
+                official FIDE rating.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -167,6 +187,38 @@
             </figcaption>
           </figure>
         </div>
+        <div class="drum-details">
+          <p>
+            Additionally, Henry is a dedicated drummer with 7 years of experience.
+            He has extensive experience with rehearsals and live performances, and
+            has collaborated with his school band, showing teamwork and musical
+            adaptability.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" id="coding" data-animate>
+        <div class="panel-title">
+          <h2>Coding</h2>
+          <p>Logical thinking, clean design, and real-world projects.</p>
+        </div>
+        <div class="coding-cards">
+          <div class="coding-card">
+            <h3>Experience</h3>
+            <p>
+              Henry has several years of coding experience, building websites and
+              applications with a strong focus on problem-solving, logical thinking,
+              and clean design.
+            </p>
+          </div>
+          <div class="coding-card">
+            <h3>Featured Project</h3>
+            <p>
+              One of Henry's major projects is the ChatBot he made for his school,
+              designed to answer any and all questions about SABIS Adma.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="panel contact" id="contact" data-animate>
@@ -181,6 +233,16 @@
           <a class="btn ghost" href="https://chesstv.com/profile/5331803">
             View ChessTV
           </a>
+        </div>
+        <div class="contact-details">
+          <p>
+            Email:
+            <a href="mailto:henry.raji2011@gmail.com">henry.raji2011@gmail.com</a>
+          </p>
+          <p>
+            Instagram:
+            <a href="https://www.instagram.com/henryraji2011/">@henryraji2011</a>
+          </p>
         </div>
       </section>
     </main>
