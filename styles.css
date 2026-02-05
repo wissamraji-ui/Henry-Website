@@ -405,6 +405,31 @@ main {
   max-width: 520px;
 }
 
+.chess-goals {
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+}
+
+.chess-goals h3 {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ocean);
+  margin-bottom: 12px;
+}
+
+.chess-goals ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted-text);
+  line-height: 1.7;
+  display: grid;
+  gap: 8px;
+}
+
 .chess-meta {
   display: grid;
   gap: 18px;
