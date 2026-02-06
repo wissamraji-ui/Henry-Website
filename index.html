@@ -14,6 +14,10 @@
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar"></div>
+    </div>
+    <a class="back-to-top" href="#top" aria-label="Back to top">Top</a>
 
     <header class="site-header">
       <div class="logo">Henry Raji</div>
@@ -248,17 +252,41 @@
           </a>
         </div>
         <div class="contact-details">
-          <p>
-            Email:
+          <p class="contact-item">
+            <span class="contact-label">Email:</span>
             <a href="mailto:henry.raji2011@gmail.com">henry.raji2011@gmail.com</a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy="henry.raji2011@gmail.com"
+              aria-label="Copy email address"
+            >
+              Copy
+            </button>
           </p>
-          <p>
-            Instagram:
+          <p class="contact-item">
+            <span class="contact-label">Instagram:</span>
             <a href="https://www.instagram.com/henryraji2011/">@henryraji2011</a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy="@henryraji2011"
+              aria-label="Copy Instagram handle"
+            >
+              Copy
+            </button>
           </p>
-          <p>
-            TikTok:
+          <p class="contact-item">
+            <span class="contact-label">TikTok:</span>
             <a href="https://www.tiktok.com/@henryrajichess">@henryrajichess</a>
+            <button
+              class="copy-btn"
+              type="button"
+              data-copy="@henryrajichess"
+              aria-label="Copy TikTok handle"
+            >
+              Copy
+            </button>
           </p>
         </div>
       </section>

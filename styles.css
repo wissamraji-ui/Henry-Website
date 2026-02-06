@@ -122,6 +122,10 @@ html[data-theme="dark"] {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Sora", sans-serif;
   background: var(--bg-gradient);
@@ -140,6 +144,56 @@ body {
     radial-gradient(circle at 70% 80%, var(--backdrop-c), transparent 60%);
   pointer-events: none;
   z-index: -1;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  z-index: 30;
+  background: rgba(17, 76, 95, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--ocean), var(--sun));
+  box-shadow: 0 6px 16px rgba(17, 76, 95, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.back-to-top {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 20;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--ink);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 12px 24px rgba(11, 29, 35, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .site-header {
@@ -597,10 +651,52 @@ main {
   font-size: 0.98rem;
 }
 
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-label {
+  color: var(--muted-text-strong);
+  font-weight: 600;
+}
+
 .contact-details a {
   color: var(--ocean);
   text-decoration: none;
   font-weight: 600;
+}
+
+.copy-btn {
+  border: 1px solid var(--btn-ghost-border);
+  background: var(--btn-ghost-bg);
+  color: var(--ocean);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(11, 29, 35, 0.15);
+}
+
+.copy-btn.is-copied {
+  background: var(--ocean);
+  color: #fff;
+  border-color: transparent;
+}
+
+.copy-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .site-footer {

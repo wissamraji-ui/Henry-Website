@@ -38,3 +38,87 @@ themeButtons.forEach((button) => {
 });
 
 applyTheme(storedTheme);
+
+const progressBar = document.querySelector(".scroll-progress__bar");
+let progressTicking = false;
+
+const updateScrollProgress = () => {
+  if (!progressBar) {
+    return;
+  }
+
+  const scrollTop = window.scrollY;
+  const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollRange > 0 ? scrollTop / scrollRange : 0;
+
+  progressBar.style.transform = `scaleX(${progress})`;
+  progressTicking = false;
+};
+
+const requestProgressUpdate = () => {
+  if (progressTicking) {
+    return;
+  }
+
+  progressTicking = true;
+  window.requestAnimationFrame(updateScrollProgress);
+};
+
+window.addEventListener("scroll", requestProgressUpdate, { passive: true });
+window.addEventListener("resize", requestProgressUpdate);
+requestProgressUpdate();
+
+const copyButtons = document.querySelectorAll(".copy-btn");
+
+const fallbackCopyText = (text) => {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  const succeeded = document.execCommand("copy");
+  document.body.removeChild(textarea);
+  return succeeded;
+};
+
+const flashCopiedState = (button) => {
+  const originalLabel = button.dataset.originalLabel || button.textContent;
+  button.dataset.originalLabel = originalLabel;
+  button.textContent = "Copied";
+  button.classList.add("is-copied");
+
+  window.setTimeout(() => {
+    button.textContent = originalLabel;
+    button.classList.remove("is-copied");
+  }, 1200);
+};
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const textToCopy = button.dataset.copy;
+    if (!textToCopy) {
+      return;
+    }
+
+    let copied = false;
+
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        copied = true;
+      } catch (error) {
+        copied = false;
+      }
+    }
+
+    if (!copied) {
+      copied = fallbackCopyText(textToCopy);
+    }
+
+    if (copied) {
+      flashCopiedState(button);
+    }
+  });
+});
