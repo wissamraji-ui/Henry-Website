@@ -76,7 +76,7 @@ const translations = {
     "about.title": "About Henry",
     "about.subtitle": "Calm presence, sharp tactics, and a love for the game.",
     "about.p1":
-      "Born in November 1, 2011. Henry Raji is a chess player known for a disciplined approach and a curious mind. His style blends patience with timely bursts of creativity, always looking for opportunities to shift momentum.",
+      "Henry Raji is a chess player known for a disciplined approach and a curious mind. His style blends patience with timely bursts of creativity, always looking for opportunities to shift momentum.",
     "about.p2":
       "Beyond the board, he is also a drummer, building rhythm, timing, and stage confidence through regular practice and performances.",
     "about.p3":
