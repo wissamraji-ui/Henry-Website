@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Henry Raji | Chess & Story</title>
+    <title data-i18n="meta.title">Henry Raji | Chess & Story</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,23 +17,47 @@
     <div class="scroll-progress" aria-hidden="true">
       <div class="scroll-progress__bar"></div>
     </div>
-    <a class="back-to-top" href="#top" aria-label="Back to top">Top</a>
+    <a
+      class="back-to-top"
+      href="#top"
+      aria-label="Back to top"
+      data-i18n="ui.top"
+      data-i18n-aria-label="ui.back_to_top"
+    >
+      Top
+    </a>
 
     <header class="site-header">
       <div class="logo">Henry Raji</div>
       <div class="header-actions">
         <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#chess">Chess</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#drums">Drums</a>
-          <a href="#coding">Coding</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#chess" data-i18n="nav.chess">Chess</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#drums" data-i18n="nav.drums">Drums</a>
+          <a href="#coding" data-i18n="nav.coding">Coding</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
-        <div class="theme-toggle" role="group" aria-label="Theme">
-          <button type="button" data-theme-value="light">Light</button>
-          <button type="button" data-theme-value="dark">Dark</button>
-          <button type="button" data-theme-value="auto">Auto</button>
+        <div
+          class="language-toggle"
+          role="group"
+          aria-label="Language"
+          data-i18n-aria-label="language.label"
+        >
+          <button type="button" data-language-value="en" data-i18n="language.english">
+            English
+          </button>
+          <button type="button" data-language-value="ar" data-i18n="language.arabic">
+            Arabic
+          </button>
+          <button type="button" data-language-value="fr" data-i18n="language.french">
+            French
+          </button>
+        </div>
+        <div class="theme-toggle" role="group" aria-label="Theme" data-i18n-aria-label="theme.label">
+          <button type="button" data-theme-value="light" data-i18n="theme.light">Light</button>
+          <button type="button" data-theme-value="dark" data-i18n="theme.dark">Dark</button>
+          <button type="button" data-theme-value="auto" data-i18n="theme.auto">Auto</button>
         </div>
       </div>
     </header>
@@ -41,21 +65,25 @@
     <main>
       <section class="hero" id="top">
         <div class="hero-text">
-          <p class="eyebrow">Chess Player. Developer. Drummer</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Chess Player. Developer. Drummer</p>
           <h1>Henry Raji</h1>
-          <p class="lead">
+          <p class="lead" data-i18n="hero.lead">
             A story shaped by patience, bold ideas, and the quiet focus it takes to
             calculate the next move. From city lights to 64 squares, Henry brings
             fresh energy to every game.
           </p>
           <div class="cta">
-            <a class="btn primary" href="#chess">View Chess Snapshot</a>
-            <a class="btn ghost" href="#gallery">See the Photo Story</a>
+            <a class="btn primary" href="#chess" data-i18n="hero.cta_chess">
+              View Chess Snapshot
+            </a>
+            <a class="btn ghost" href="#gallery" data-i18n="hero.cta_gallery">
+              See the Photo Story
+            </a>
           </div>
           <div class="meta">
-            <span>Federation: Lebanon</span>
-            <span>Rapid Rating: 1498</span>
-            <span>World Ranking (Rapid): #1498</span>
+            <span data-i18n="hero.meta_federation">Federation: Lebanon</span>
+            <span data-i18n="hero.meta_rating">Rapid Rating: 1498</span>
+            <span data-i18n="hero.meta_ranking">World Ranking (Rapid): #1498</span>
           </div>
         </div>
           <div class="hero-card">
@@ -63,31 +91,34 @@
             <img
               src="Henry.jpg"
               alt="Henry Raji smiling near the water with a city skyline at dusk"
+              data-i18n-alt="hero.photo_alt"
             />
           </div>
           <div class="photo-caption">
-            <p>Seaside evenings. Clear focus. A snapshot of Henry's world.</p>
+            <p data-i18n="hero.caption">
+              Seaside evenings. Clear focus. A snapshot of Henry's world.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="panel" id="about" data-animate>
         <div class="panel-title">
-          <h2>About Henry</h2>
-          <p>Calm presence, sharp tactics, and a love for the game.</p>
+          <h2 data-i18n="about.title">About Henry</h2>
+          <p data-i18n="about.subtitle">Calm presence, sharp tactics, and a love for the game.</p>
         </div>
         <div class="panel-body">
-          <p>
+          <p data-i18n="about.p1">
             Born in November 1, 2011.
             Henry Raji is a chess player known for a disciplined approach and a
             curious mind. His style blends patience with timely bursts of
             creativity, always looking for opportunities to shift momentum.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Beyond the board, he is also a drummer, building rhythm, timing, and
             stage confidence through regular practice and performances.
           </p>
-          <p>
+          <p data-i18n="about.p3">
             This site captures a chess snapshot alongside a visual story. It is
             a place to celebrate growth, resilience, and the journey ahead.
           </p>
@@ -96,51 +127,61 @@
 
       <section class="panel" id="chess" data-animate>
         <div class="panel-title">
-          <h2>Chess Snapshot</h2>
-          <p>Public profile metrics and quick facts.</p>
+          <h2 data-i18n="chess.title">Chess Snapshot</h2>
+          <p data-i18n="chess.subtitle">Public profile metrics and quick facts.</p>
         </div>
         <div class="chess-layout">
           <div class="stats">
             <div class="stat-card">
-              <h3>Federation</h3>
-              <p>Lebanon</p>
+              <h3 data-i18n="chess.stat_federation">Federation</h3>
+              <p data-i18n="chess.stat_federation_value">Lebanon</p>
             </div>
             <div class="stat-card">
-              <h3>Rapid Rating</h3>
-              <p>1498</p>
+              <h3 data-i18n="chess.stat_rating">Rapid Rating</h3>
+              <p data-i18n="chess.stat_rating_value">1498</p>
             </div>
             <div class="stat-card">
-              <h3>World Ranking (Rapid)</h3>
-              <p>#1498</p>
+              <h3 data-i18n="chess.stat_ranking">World Ranking (Rapid)</h3>
+              <p data-i18n="chess.stat_ranking_value">#1498</p>
             </div>
           </div>
           <div class="chess-media">
             <div class="chess-goals">
-              <h3>Goals</h3>
+              <h3 data-i18n="chess.goals_title">Goals</h3>
               <ul>
-                <li>Reach 1800 FIDE rating.</li>
-                <li>Play International tournaments.</li>
-                <li>Grow the chess community.</li>
-                <li>To win more rated tournaments.</li>
+                <li data-i18n="chess.goal_1">Reach 1800 FIDE rating.</li>
+                <li data-i18n="chess.goal_2">Play International tournaments.</li>
+                <li data-i18n="chess.goal_3">Grow the chess community.</li>
+                <li data-i18n="chess.goal_4">To win more rated tournaments.</li>
               </ul>
             </div>
             <div class="chess-photo">
-              <img src="chess1.jpg" alt="Henry focused during a chess game" />
+              <img
+                src="chess1.jpg"
+                alt="Henry focused during a chess game"
+                data-i18n-alt="chess.photo_alt"
+              />
             </div>
-            <p class="chess-caption">A quiet moment over the board during match play.</p>
+            <p class="chess-caption" data-i18n="chess.caption">
+              A quiet moment over the board during match play.
+            </p>
           </div>
           <div class="chess-meta">
             <div class="panel-note">
-              <p>
+              <p data-i18n="chess.note">
                 Last verified: Jan 31, 2026. Ratings update over time.
               </p>
               <div class="links">
-                <a href="https://www.chess.com/players/henry-raji">Chess.com profile</a>
-                <a href="https://chesstv.com/profile/5331803">ChessTV profile</a>
+                <a href="https://www.chess.com/players/henry-raji" data-i18n="chess.link_chesscom">
+                  Chess.com profile
+                </a>
+                <a href="https://chesstv.com/profile/5331803" data-i18n="chess.link_chesstv">
+                  ChessTV profile
+                </a>
               </div>
             </div>
             <div class="chess-details">
-              <p>
+              <p data-i18n="chess.details">
                 Henry has been playing chess for 4 years, developing strong strategic
                 thinking, patience, and problem-solving skills. Additionally, he is
                 actively playing in rated tournaments, working hard to increase his
@@ -153,29 +194,35 @@
 
       <section class="panel" id="gallery" data-animate>
         <div class="panel-title">
-          <h2>Photo Story</h2>
-          <p>A calm horizon and a focused competitor.</p>
+          <h2 data-i18n="gallery.title">Photo Story</h2>
+          <p data-i18n="gallery.subtitle">A calm horizon and a focused competitor.</p>
         </div>
         <div class="gallery-grid">
           <div class="gallery-card">
-            <h3>Focus</h3>
-            <p>Every match is a puzzle. Every position is a conversation.</p>
+            <h3 data-i18n="gallery.focus_title">Focus</h3>
+            <p data-i18n="gallery.focus_body">
+              Every match is a puzzle. Every position is a conversation.
+            </p>
           </div>
           <div class="gallery-card">
-            <h3>Curiosity</h3>
-            <p>Exploring ideas on the board with a fearless mindset.</p>
+            <h3 data-i18n="gallery.curiosity_title">Curiosity</h3>
+            <p data-i18n="gallery.curiosity_body">
+              Exploring ideas on the board with a fearless mindset.
+            </p>
           </div>
           <div class="gallery-card">
-            <h3>Momentum</h3>
-            <p>Building pressure move by move until the time is right.</p>
+            <h3 data-i18n="gallery.momentum_title">Momentum</h3>
+            <p data-i18n="gallery.momentum_body">
+              Building pressure move by move until the time is right.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="panel" id="drums" data-animate>
         <div class="panel-title">
-          <h2>Drum Skills</h2>
-          <p>Rhythm, focus, and live performance energy.</p>
+          <h2 data-i18n="drums.title">Drum Skills</h2>
+          <p data-i18n="drums.subtitle">Rhythm, focus, and live performance energy.</p>
         </div>
         <div class="drum-grid">
           <figure class="drum-card">
@@ -183,9 +230,10 @@
               <img
                 src="drum1.JPG"
                 alt="Henry performing on an electric drum kit at the Sabis School Adma annual concert in Lebanon"
+                data-i18n-alt="drums.photo1_alt"
               />
             </div>
-            <figcaption>
+            <figcaption data-i18n="drums.photo1_caption">
               Annual concert at Sabis School Adma, Lebanon — electric drum performance.
             </figcaption>
           </figure>
@@ -194,15 +242,16 @@
               <img
                 src="drum2.JPG"
                 alt="Henry performing on an electric drum kit at the Sabis School Adma annual concert in Lebanon"
+                data-i18n-alt="drums.photo2_alt"
               />
             </div>
-            <figcaption>
+            <figcaption data-i18n="drums.photo2_caption">
               Same annual concert at Sabis School Adma, Lebanon — another electric drum set.
             </figcaption>
           </figure>
         </div>
         <div class="drum-details">
-          <p>
+          <p data-i18n="drums.details">
             Additionally, Henry is a dedicated drummer with 7 years of experience.
             He has extensive experience with rehearsals and live performances, and
             has collaborated with his school band, showing teamwork and musical
@@ -213,21 +262,21 @@
 
       <section class="panel" id="coding" data-animate>
         <div class="panel-title">
-          <h2>Coding</h2>
-          <p>Logical thinking, clean design, and real-world projects.</p>
+          <h2 data-i18n="coding.title">Coding</h2>
+          <p data-i18n="coding.subtitle">Logical thinking, clean design, and real-world projects.</p>
         </div>
         <div class="coding-cards">
           <div class="coding-card">
-            <h3>Experience</h3>
-            <p>
+            <h3 data-i18n="coding.exp_title">Experience</h3>
+            <p data-i18n="coding.exp_body">
               Henry has several years of coding experience, building websites and
               applications with a strong focus on problem-solving, logical thinking,
               and clean design.
             </p>
           </div>
           <div class="coding-card">
-            <h3>Featured Project</h3>
-            <p>
+            <h3 data-i18n="coding.project_title">Featured Project</h3>
+            <p data-i18n="coding.project_body">
               One of Henry's major projects is the ChatBot he made for his school,
               designed to answer any and all questions about SABIS Adma.
             </p>
@@ -237,53 +286,59 @@
 
       <section class="panel contact" id="contact" data-animate>
         <div class="panel-title">
-          <h2>Connect</h2>
-          <p>Follow Henry's chess journey and future updates.</p>
+          <h2 data-i18n="contact.title">Connect</h2>
+          <p data-i18n="contact.subtitle">Follow Henry's chess journey and future updates.</p>
         </div>
         <div class="cta">
-          <a class="btn primary" href="https://www.chess.com/players/henry-raji">
+          <a class="btn primary" href="https://www.chess.com/players/henry-raji" data-i18n="contact.cta_chesscom">
             Follow on Chess.com
           </a>
-          <a class="btn primary" href="https://lichess.org/@/Henry_Raji">
+          <a class="btn primary" href="https://lichess.org/@/Henry_Raji" data-i18n="contact.cta_lichess">
             Follow on lichess.org
           </a>
-          <a class="btn ghost" href="https://chesstv.com/profile/5331803">
+          <a class="btn ghost" href="https://chesstv.com/profile/5331803" data-i18n="contact.cta_chesstv">
             View ChessTV
           </a>
         </div>
         <div class="contact-details">
           <p class="contact-item">
-            <span class="contact-label">Email:</span>
+            <span class="contact-label" data-i18n="contact.email_label">Email:</span>
             <a href="mailto:henry.raji2011@gmail.com">henry.raji2011@gmail.com</a>
             <button
               class="copy-btn"
               type="button"
               data-copy="henry.raji2011@gmail.com"
               aria-label="Copy email address"
+              data-i18n="contact.copy"
+              data-i18n-aria-label="contact.copy_email_aria"
             >
               Copy
             </button>
           </p>
           <p class="contact-item">
-            <span class="contact-label">Instagram:</span>
+            <span class="contact-label" data-i18n="contact.instagram_label">Instagram:</span>
             <a href="https://www.instagram.com/henryraji2011/">@henryraji2011</a>
             <button
               class="copy-btn"
               type="button"
               data-copy="@henryraji2011"
               aria-label="Copy Instagram handle"
+              data-i18n="contact.copy"
+              data-i18n-aria-label="contact.copy_instagram_aria"
             >
               Copy
             </button>
           </p>
           <p class="contact-item">
-            <span class="contact-label">TikTok:</span>
+            <span class="contact-label" data-i18n="contact.tiktok_label">TikTok:</span>
             <a href="https://www.tiktok.com/@henryrajichess">@henryrajichess</a>
             <button
               class="copy-btn"
               type="button"
               data-copy="@henryrajichess"
               aria-label="Copy TikTok handle"
+              data-i18n="contact.copy"
+              data-i18n-aria-label="contact.copy_tiktok_aria"
             >
               Copy
             </button>
@@ -293,7 +348,9 @@
     </main>
 
     <footer class="site-footer">
-      <p>Designed to highlight Henry Raji's chess journey and visual story.</p>
+      <p data-i18n="footer.text">
+        Designed to highlight Henry Raji's chess journey and visual story.
+      </p>
     </footer>
 
     <script src="script.js"></script>

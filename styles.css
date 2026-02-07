@@ -25,6 +25,7 @@
   --toggle-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   --primary-shadow: 0 16px 35px rgba(17, 76, 95, 0.3);
   --gallery-bg: linear-gradient(140deg, rgba(17, 76, 95, 0.08), rgba(246, 195, 122, 0.18));
+  --chess-pattern: rgba(17, 76, 95, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,6 +56,7 @@
     --toggle-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
     --primary-shadow: 0 16px 35px rgba(3, 6, 8, 0.6);
     --gallery-bg: linear-gradient(140deg, rgba(121, 199, 217, 0.14), rgba(246, 195, 122, 0.08));
+    --chess-pattern: rgba(121, 199, 217, 0.16);
   }
 }
 
@@ -85,6 +87,7 @@ html[data-theme="light"] {
   --toggle-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   --primary-shadow: 0 16px 35px rgba(17, 76, 95, 0.3);
   --gallery-bg: linear-gradient(140deg, rgba(17, 76, 95, 0.08), rgba(246, 195, 122, 0.18));
+  --chess-pattern: rgba(17, 76, 95, 0.12);
 }
 
 html[data-theme="dark"] {
@@ -114,6 +117,7 @@ html[data-theme="dark"] {
   --toggle-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
   --primary-shadow: 0 16px 35px rgba(3, 6, 8, 0.6);
   --gallery-bg: linear-gradient(140deg, rgba(121, 199, 217, 0.14), rgba(246, 195, 122, 0.08));
+  --chess-pattern: rgba(121, 199, 217, 0.16);
 }
 
 * {
@@ -145,6 +149,7 @@ body {
   pointer-events: none;
   z-index: -1;
 }
+
 
 .scroll-progress {
   position: fixed;
@@ -245,7 +250,8 @@ body {
   transition: width 0.3s ease;
 }
 
-.theme-toggle {
+.theme-toggle,
+.language-toggle {
   display: inline-flex;
   gap: 6px;
   padding: 4px;
@@ -255,7 +261,8 @@ body {
   box-shadow: var(--toggle-shadow);
 }
 
-.theme-toggle button {
+.theme-toggle button,
+.language-toggle button {
   border: 0;
   background: transparent;
   color: var(--ink);
@@ -267,19 +274,26 @@ body {
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.theme-toggle button.active {
+.theme-toggle button.active,
+.language-toggle button.active {
   background: var(--ocean);
   color: #fff;
   transform: translateY(-1px);
 }
 
-.theme-toggle button:focus-visible {
+.theme-toggle button:focus-visible,
+.language-toggle button:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
 .nav a:hover::after {
   width: 100%;
+}
+
+html[dir="rtl"] .nav a::after {
+  left: auto;
+  right: 0;
 }
 
 main {
@@ -397,6 +411,32 @@ main {
   background: var(--panel-bg);
   box-shadow: var(--shadow);
   border: 1px solid var(--panel-border);
+}
+
+#chess {
+  position: relative;
+  overflow: hidden;
+}
+
+#chess::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, var(--chess-pattern) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--chess-pattern) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--chess-pattern) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--chess-pattern) 75%);
+  background-size: 44px 44px;
+  background-position: 0 0, 0 22px, 22px -22px, -22px 0;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#chess > * {
+  position: relative;
+  z-index: 1;
 }
 
 .panel-title h2 {
