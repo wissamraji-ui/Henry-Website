@@ -63,6 +63,7 @@ const translations = {
     "theme.light": "Light",
     "theme.dark": "Dark",
     "theme.auto": "Auto",
+    "hero.name": "Henry Raji",
     "hero.eyebrow": "Chess Player. Developer. Drummer",
     "hero.lead":
       "A story shaped by patience, bold ideas, and the quiet focus it takes to calculate the next move. From city lights to 64 squares, Henry brings fresh energy to every game.",
@@ -162,6 +163,7 @@ const translations = {
     "theme.light": "فاتح",
     "theme.dark": "داكن",
     "theme.auto": "تلقائي",
+    "hero.name": "هنري راجي",
     "hero.eyebrow": "لاعب شطرنج. مطوّر. عازف طبول",
     "hero.lead":
       "قصة شكّلتها الصبر والأفكار الجريئة والتركيز الهادئ الذي يلزم لحساب النقلة التالية. من أضواء المدينة إلى 64 مربعًا، يجلب هنري طاقة جديدة إلى كل مباراة.",
@@ -175,7 +177,7 @@ const translations = {
     "about.title": "عن هنري",
     "about.subtitle": "حضور هادئ، تكتيكات حادة، وحب للعبة.",
     "about.p1":
-      "وُلد في 1 نوفمبر 2011. هنري راجي لاعب شطرنج معروف بأسلوب منضبط وعقل فضولي. يمزج أسلوبه بين الصبر ولمحات الإبداع في الوقت المناسب، ودائمًا ما يبحث عن فرص لتغيير الزخم.",
+      "هنري راجي لاعب شطرنج معروف بأسلوب منضبط وعقل فضولي. يمزج أسلوبه بين الصبر ولمحات الإبداع في الوقت المناسب، ودائمًا ما يبحث عن فرص لتغيير الزخم.",
     "about.p2":
       "وخارج الرقعة، هو أيضًا عازف طبول، يبني الإيقاع والتوقيت والثقة على المسرح من خلال التدريب والعروض المنتظمة.",
     "about.p3":
@@ -261,6 +263,7 @@ const translations = {
     "theme.light": "Clair",
     "theme.dark": "Sombre",
     "theme.auto": "Auto",
+    "hero.name": "Henry Raji",
     "hero.eyebrow": "Joueur d'échecs. Développeur. Batteur",
     "hero.lead":
       "Une histoire façonnée par la patience, des idées audacieuses et la concentration tranquille nécessaire pour calculer le prochain coup. Des lumières de la ville aux 64 cases, Henry apporte une énergie nouvelle à chaque partie.",
@@ -276,7 +279,7 @@ const translations = {
     "about.title": "À propos de Henry",
     "about.subtitle": "Présence calme, tactiques affûtées et amour du jeu.",
     "about.p1":
-      "Né le 1 novembre 2011. Henry Raji est un joueur d'échecs connu pour une approche disciplinée et un esprit curieux. Son style mêle patience et élans de créativité, toujours à la recherche d’occasions de faire basculer le rythme.",
+      "Henry Raji est un joueur d'échecs connu pour une approche disciplinée et un esprit curieux. Son style mêle patience et élans de créativité, toujours à la recherche d’occasions de faire basculer le rythme.",
     "about.p2":
       "Au-delà de l’échiquier, il est aussi batteur, développant le rythme, le timing et la confiance sur scène grâce à des répétitions et des performances régulières.",
     "about.p3":
